@@ -1,7 +1,8 @@
 import React from "react";
+import DataForm from "../Components/DataForm";
 
 function IndexPage() {
-    return  "Hola";
+    return  <DataForm/>;
 }
   
 export default IndexPage;
