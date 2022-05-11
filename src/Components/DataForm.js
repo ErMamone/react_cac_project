@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const maxNumber = Number.MAX_VALUE;
+
 function DataForm(params){
     const [producto, setProducto] = useState("");
     const [cantidad, setCantidad] = useState("");
