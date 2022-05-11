@@ -52,7 +52,7 @@ function DataForm(params){
                 className="form-control"
                 type="number"
                 min="1"
-                max="${maxNumber}"
+                max={maxNumber}
                 id="cantidad"
                 placeholder="Cantidad:"></input>
             </div>
