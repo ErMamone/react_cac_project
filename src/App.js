@@ -1,5 +1,6 @@
 import './App.css';
 import IndexPage from './Pages/IndexPage';
+import Header from "./Pages/Header";
 
 var context;
 
