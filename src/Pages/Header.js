@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Header(params){
-    params = "hola mundo"
-    return params;
+
+    return (<div className="container">
+        <h1>ESTO ES UN HEADER </h1>
+        <h2>{params.value}</h2>
+        <p>
+            {params.value}
+        </p>
+        </div>);
 }
 
 export default Header;
