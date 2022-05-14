@@ -1,8 +1,9 @@
 import './App.css';
+import React from "react";
 import IndexPage from './Pages/IndexPage';
 import Header from "./Pages/Header";
 
-var context = "hola mundo";
+let context = "hola mundo"
 
 function App() {
   return (
