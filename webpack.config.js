@@ -7,7 +7,8 @@ module.exports = {
     mode:  "production",
     entry: path.join(__dirname, "src", "index.js"),
     output: {
-        path:path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/",
     },
     module: {
         rules: [
@@ -33,11 +34,19 @@ module.exports = {
                 test: /\.svg$/,
                 use: ['@svgr/webpack'],
             },
+            {
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '/public/[name].[ext]'
+                }
+            }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "public", "index.html"),
+            favicon: path.join(__dirname, "public", "favicon.ico"),
         }),
     ],
     optimization: {

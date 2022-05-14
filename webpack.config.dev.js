@@ -5,7 +5,8 @@ module.exports = {
     mode:  "development",
     entry: path.join(__dirname, "src", "index.js"),
     output: {
-        path:path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/",
     },
     module: {
         rules: [
@@ -43,6 +44,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "public", "index.html"),
+            favicon: path.join(__dirname, "public", "favicon.ico"),
         }),
     ],
     devServer: {
